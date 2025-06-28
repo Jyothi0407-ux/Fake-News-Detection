@@ -2,11 +2,10 @@ import streamlit as st
 import pickle
 import gzip
 
-# Load compressed model file
+# Load model and vectorizer
 with gzip.open("model.pkl.gz", "rb") as f:
     model = pickle.load(f)
 
-# Load vectorizer
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
 st.title("📰 Fake News Detector")
