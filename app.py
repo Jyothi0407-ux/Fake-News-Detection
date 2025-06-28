@@ -3,9 +3,21 @@ import pickle
 
 # Load model and vectorizer
 import gzip
-with gzip.open("model.pkl.gz", "rb") as f:
+import numpy as np
+
+# Load the machine learning model
+with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
+# Reduce the precision of numerical values
+model.weights = np.around(model.weights, decimals=4)
+
+# Remove unnecessary data
+del model.dataset
+
+# Compress the pickle file
+with gzip.open('model.pkl.gz', 'wb') as f:
+    pickle.dump(model, f)
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
 st.title("📰 Fake News Detector")
