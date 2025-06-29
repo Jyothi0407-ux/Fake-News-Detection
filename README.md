@@ -1,37 +1,37 @@
 📰 Fake News Detection using Machine Learning
-This project uses a Machine Learning model to detect whether a news article is real or fake.
+This project is focused on detecting fake news articles using a machine learning model trained on real and fake news datasets.
 
-🔍 What’s in the Project?
-A trained machine learning model (model.pkl)
+📁 Files in the Project
+Fake_News_Detection.ipynb → Main notebook that includes preprocessing, training, and predictions.
 
-A text vectorizer (vectorizer.pkl) to convert input text into numerical features
+Fake.csv → Dataset containing fake news.
 
-A Jupyter notebook (fake_news_detection.ipynb) with all the code for:
+True.csv → Dataset containing real news.
 
-Loading and preparing data
+✅ Requirements
+Make sure the following Python libraries are installed:
 
-Training the model
-
-Evaluating and testing predictions
-
-⚙️ How to Run
-Make sure you have Python installed (preferably 3.8 or above).
-
-1. Clone the Repository
 bash
 Copy
 Edit
-git clone https://github.com/Jyothi0407-ux/Fake-News-Detection.git
+pip install pandas numpy sklearn
+🚀 How to Run the Code
+🔹 Option 1: Jupyter Notebook (Recommended)
+Download or clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/YourUsername/Fake-News-Detection.git
+Open the project folder:
+
+bash
+Copy
+Edit
 cd Fake-News-Detection
-2. Install Required Libraries
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3. Open the Notebook
+Run Jupyter Notebook:
+
 bash
 Copy
 Edit
 jupyter notebook
-Then open fake_news_detection.ipynb and run all cells to train and test the model.
-
